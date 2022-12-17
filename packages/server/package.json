@@ -1,5 +1,5 @@
 {
-  "name": "@playground/recipes-api",
+  "name": "@recipes/server",
   "version": "1.0.0",
   "description": "GraphQL api for finding food recipes",
   "main": "./src/index.ts",

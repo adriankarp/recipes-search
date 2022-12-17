@@ -1,6 +1,6 @@
-# playground
+# recipes search
 
-Monorepo used to implement and showcase different projects and technologies using JavaScript ecosystem.
+recipes search
 
 ## About
 
@@ -10,30 +10,25 @@ Monorepo used to implement and showcase different projects and technologies usin
 - Package name convention is `@playground/package-name`
 - JavaScript ecosystem based
 
-## Documentation
+## Intitial setup
 
-- Each package has its own `README.md` file with documentation
-- _i.e._ `packages/components/web/README.md`
-
+```
+pnpm install
+```
 ## Packages
 
 ### Apps
 
 | name                      | path                      | description                                                                                   |
 | ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------- |
-| `@playground/recipes-app` | `./packages/apis/recipes` | React client which consumes `@playground/recipes-api` [EDAMAM](https://developer.edamam.com/) |
+| `@recipes/recipes-app` | `./packages/apis/recipes` | React client which consumes `@recipes/recipes-api` [EDAMAM](https://developer.edamam.com/) |
 
 ### Apis
 
 | name                      | path                      | description                                                                  |
 | ------------------------- | ------------------------- | ---------------------------------------------------------------------------- |
-| `@playground/recipes-api` | `./packages/apis/recipes` | GraphQL api for finding food recipes [EDAMAM](https://developer.edamam.com/) |
+| `@recipes/recipes-api` | `./packages/apis/recipes` | GraphQL api for finding food recipes [EDAMAM](https://developer.edamam.com/) |
 
-## Intitial setup
-
-```
-pnpm install
-```
 
 ## Scripts
 
@@ -49,13 +44,6 @@ Scripts are executed from root level
 | pnpm storybook                      | run storybook                        |
 | pnpm storybook:build                | build storybook                      |
 
-## Roadmap
-
-| goal                                          | status |
-| --------------------------------------------- | ------ |
-| monorepo setup & shared code between packages | ✅     |
-| food recipes app with GraphQL and React       | ⏳     |
-| TBA..                                         | ⏳     |
 
 ## Contributing
 
