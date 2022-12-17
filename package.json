@@ -1,7 +1,7 @@
 {
-  "name": "playground",
+  "name": "recipes",
   "version": "1.0.0",
-  "description": "monorepo used to showcase projects",
+  "description": "GQL on top of REST for food recipes search",
   "scripts": {
     "clean": "git clean -fXd",
     "test": "jest --coverage",
