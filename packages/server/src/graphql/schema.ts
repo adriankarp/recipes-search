@@ -1,7 +1,7 @@
 const typeDefs = /* GraphQL */ `
   type Query {
-    recipes(ingredients: String!): [Recipe]
-    recipe(id: ID!): Recipe
+    recipes: String
+    recipe: String
   }
 
   type Recipe {

@@ -1,6 +1,8 @@
 const resolvers = {
   Query: {
-    recipes: () => 'multiple recipes',
+    recipes: (_, __, contextValue) => {
+      return contextValue.dataSources.recipesAPI.getRecipes();
+    },
     recipe: () => 'single recipe'
   }
 };

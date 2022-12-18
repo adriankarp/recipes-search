@@ -3,7 +3,10 @@ import app from './app';
 import apolloServer from './graphql';
 import { expressMiddleware } from '@apollo/server/express4';
 import cors from 'cors';
-import { json } from 'body-parser';
+import pkg from 'body-parser';
+import RecipesAPI from './graphql/datasource';
+
+const { json } = pkg;
 
 const start = async () => {
   try {
@@ -13,9 +16,17 @@ const start = async () => {
       '/graphql',
       cors<cors.CorsRequest>(),
       json(),
-      expressMiddleware(apolloServer)
+      expressMiddleware(apolloServer, {
+        context: async () => {
+          return {
+            dataSources: { recipesAPI: new RecipesAPI() }
+          };
+        }
+      })
     );
-    console.log(`🚀  GraphQL server running at port: ${config.PORT}`);
+    console.log(
+      `🚀  GraphQL server running at: localhost:${config.PORT}/graphql`
+    );
   } catch {
     console.log('Unable to start GraphQL server');
   }
