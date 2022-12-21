@@ -15,7 +15,6 @@
     "graph:affected": "npx nx affected:graph",
     "build": "npx nx run-many --target=build --all",
     "build:affected": "npx nx affected:build",
-    "components-web:build": "npx nx build @playground/components-web",
     "prepare": "husky install"
   },
   "keywords": [],

@@ -9,7 +9,6 @@ const typeDefs = /* GraphQL */ `
 
   type Query {
     recipes(query: String): JSONObject
-    recipe: String
   }
 
   type Recipe {

@@ -13,10 +13,6 @@ class RecipesAPI extends RESTDataSource {
       `?q=${query}&app_id=${config.API_ID}&app_key=${config.API_KEY}&type=public`
     );
   }
-
-  async getRecipe(query: string) {
-    return this.get(`$q=${query}`);
-  }
 }
 
 export default RecipesAPI;
