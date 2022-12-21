@@ -8,36 +8,23 @@ const typeDefs = /* GraphQL */ `
   }
 
   type Query {
-    recipes(query: String): JSONObject
+    recipes(query: String!): [Recipe]
   }
 
   type Recipe {
-    uri: String
-    url: String!
-    label: String!
-    image: String!
-    source: String!
-    dietLabels: [String]!
-    healthLabels: [String]!
-    cautions: [String]!
-    ingredients: [Ingredient]!
-    calories: Int
-    glycemicIndex: Int
-    totalWeight: Int
-    cuisineType: [String]!
-    mealType: [String]!
-    dishType: [String]!
-    instructions: [String!]!
-    tags: [String]!
-  }
-
-  type Ingredient {
-    text: String!
-    quantity: Int!
-    measure: String!
-    food: String
-    weight: String
-    foodId: String
+    label: String
+    image: String
+    source: String
+    instructionsURL: String
+    nutritionalValuesURL: String
+    dietLabels: [String]
+    healthLabels: [String]
+    cautions: [String]
+    ingredientLines: [String]
+    calories: String
+    cuisineType: [String]
+    mealType: [String]
+    dishType: [String]
   }
 `;
 
