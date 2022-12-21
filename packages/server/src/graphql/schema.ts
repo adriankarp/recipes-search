@@ -1,6 +1,14 @@
 const typeDefs = /* GraphQL */ `
+  scalar JSON
+  scalar JSONObject
+
+  type JSONType {
+    JSONValue: JSON
+    JSONObject: JSONObject
+  }
+
   type Query {
-    recipes: String
+    recipes(query: String): JSONObject
     recipe: String
   }
 
