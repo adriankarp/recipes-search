@@ -1,19 +1,23 @@
-import { join } from 'path';
-import { readdirSync, readFileSync } from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const typeDefs = /* GraphQL */ `
+  type Query {
+    recipes(query: String!): [Recipe]
+  }
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const gqlFiles = readdirSync(join(__dirname, './typedefs'));
-
-let typeDefs;
-
-gqlFiles.forEach((file) => {
-  typeDefs += readFileSync(join(__dirname, './typedefs', file), {
-    encoding: 'utf8'
-  });
-});
+  type Recipe {
+    label: String
+    image: String
+    source: String
+    instructionsURL: String
+    nutritionalValuesURL: String
+    dietLabels: [String]
+    healthLabels: [String]
+    cautions: [String]
+    ingredientLines: [String]
+    calories: String
+    cuisineType: [String]
+    mealType: [String]
+    dishType: [String]
+  }
+`;
 
 export default typeDefs;

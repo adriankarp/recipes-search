@@ -3,9 +3,8 @@ import typeDefs from './schema';
 import resolvers from './resolvers';
 
 const apolloServer = new ApolloServer({
-  typeDefs: typeDefs,
-  resolvers: resolvers,
-  introspection: true
+  typeDefs,
+  resolvers
 });
 
 export default apolloServer;

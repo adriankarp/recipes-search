@@ -1,34 +1,33 @@
-# recipes search
+# recipes-search
 
-recipes search
+Wondering what you could cook with all of those ingredients just sitting around in your fridge?
 
 ## About
 
-- Monorepo built with `pnpm workspaces && NX`
-- `packages/**` based folder structure
-- Shared codebase between packages
-- Package name convention is `@playground/package-name`
-- JavaScript ecosystem based
+- Get recipes suggestions from searching by ingredients
+- Resources for detailed instructions and nutritional values
+
+## Built with
+
+- [Express.js](https://expressjs.com/)
+- [Apollo GraphQL](https://www.apollographql.com/)
+- [React](https://reactjs.org/)
+- [Webpack](https://webpack.js.org/)
+- [Babel](https://babeljs.io/)
+- [Material UI](https://mui.com/)
 
 ## Intitial setup
 
 ```
 pnpm install
 ```
+
 ## Packages
 
-### Apps
-
-| name                      | path                      | description                                                                                   |
-| ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------- |
-| `@recipes/recipes-app` | `./packages/apis/recipes` | React client which consumes `@recipes/recipes-api` [EDAMAM](https://developer.edamam.com/) |
-
-### Apis
-
-| name                      | path                      | description                                                                  |
-| ------------------------- | ------------------------- | ---------------------------------------------------------------------------- |
-| `@recipes/recipes-api` | `./packages/apis/recipes` | GraphQL api for finding food recipes [EDAMAM](https://developer.edamam.com/) |
-
+| name              | path                | description                                                       |
+| ----------------- | ------------------- | ----------------------------------------------------------------- |
+| `@recipes/client` | `./packages/client` | React client for user interaction                                 |
+| `@recipes/server` | `./packages/server` | GraphQL wrapper on top of [EDAMAM](https://developer.edamam.com/) |
 
 ## Scripts
 
@@ -44,6 +43,13 @@ Scripts are executed from root level
 | pnpm storybook                      | run storybook                        |
 | pnpm storybook:build                | build storybook                      |
 
+## Roadmap
+
+| plan                                                        | progress |
+| ----------------------------------------------------------- | -------- |
+| Implement a wrapper on top of Edamam REST API using GraphQL | ✔️       |
+| Implement a React client for user interaction               | ⌛       |
+| Implement filter by constraints                             | ⌛       |
 
 ## Contributing
 
