@@ -9,6 +9,7 @@ Wondering what you could cook with all of those ingredients just sitting around 
 
 ## Built with
 
+- [TypeScript](https://www.typescriptlang.org/)
 - [Express.js](https://expressjs.com/)
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [React](https://reactjs.org/)
@@ -50,6 +51,7 @@ Scripts are executed from root level
 | Implement a wrapper on top of Edamam REST API using GraphQL | ✔️       |
 | Implement a React client for user interaction               | ⌛       |
 | Implement filter by constraints                             | ⌛       |
+| Add or remove recipes to favorite                           | ⌛       |
 
 ## Contributing
 
