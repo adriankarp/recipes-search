@@ -3,12 +3,12 @@ const path = require('path')
 module.exports = {
   entry: './src/Index.tsx',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js'
   },
   devServer: {
     static: {       
-      directory: path.resolve(__dirname, './dist')
+      directory: path.resolve(__dirname, './public')
     }
   },
   module: {
