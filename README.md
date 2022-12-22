@@ -9,6 +9,7 @@ Wondering what you could cook with all of those ingredients just sitting around 
 
 ## Built with
 
+- [TypeScript](https://www.typescriptlang.org/)
 - [Express.js](https://expressjs.com/)
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [React](https://reactjs.org/)
