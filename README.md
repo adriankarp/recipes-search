@@ -51,6 +51,7 @@ Scripts are executed from root level
 | Implement a wrapper on top of Edamam REST API using GraphQL | ✔️       |
 | Implement a React client for user interaction               | ⌛       |
 | Implement filter by constraints                             | ⌛       |
+| Add or remove recipes to favorite                           | ⌛       |
 
 ## Contributing
 
