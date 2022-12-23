@@ -2,19 +2,16 @@ import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import Grid from '@mui/material/Unstable_Grid2';
-import { faker } from '@faker-js/faker';
 import { useGetRecipes } from '../../hooks/useRecipes';
 
 const Home = () => {
   const [query, setQuery] = React.useState('');
-  const { error, loading, data } = useGetRecipes('chicken');
+
+  const { error, loading, data } = useGetRecipes('tomato garlic bread peas');
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     setQuery(event.target.value);
-    console.log(error);
-    console.log(loading);
-    console.log(data);
   };
 
   const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -23,7 +20,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <>
       <NavBar onChange={onChange} onClick={onClick} />
       <Grid
         container
@@ -32,217 +29,27 @@ const Home = () => {
         alignContent="center"
         mt={3}
       >
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
-        <RecipeCard
-          label={faker.commerce.product()}
-          image={faker.image.food()}
-          ingredients={[
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage(),
-            faker.git.commitMessage()
-          ]}
-        />
+        {loading ? (
+          <h5>Loading...</h5>
+        ) : (
+          data.recipes.map(
+            (recipe: {
+              label: string;
+              image: string;
+              ingredientLines: string[];
+            }) => {
+              return (
+                <RecipeCard
+                  label={recipe.label}
+                  image={recipe.image}
+                  ingredients={recipe.ingredientLines}
+                />
+              );
+            }
+          )
+        )}
       </Grid>
-    </div>
+    </>
   );
 };
 

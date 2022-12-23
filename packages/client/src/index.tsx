@@ -10,7 +10,9 @@ const rootNode = document.getElementById('app');
 if (rootNode) {
   createRoot(rootNode).render(
     <ApolloProvider client={client}>
-      <App />
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
     </ApolloProvider>
   );
 }

@@ -25,8 +25,9 @@ export const useGetRecipes = (query: string) => {
     variables: { query }
   });
 
-  if (loading) return 'Loading...';
-  if (error) return `Error! ${error.message}`;
-
-  return data;
+  return {
+    data,
+    error,
+    loading
+  };
 };
