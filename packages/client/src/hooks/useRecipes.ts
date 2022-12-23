@@ -21,9 +21,12 @@ const GET_RECIPES = gql`
 `;
 
 export const useGetRecipes = (query: string) => {
-  const { error, data } = useQuery(GET_RECIPES);
+  const { loading, error, data } = useQuery(GET_RECIPES, {
+    variables: { query }
+  });
 
-  if (error) return { error };
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
 
   return data;
 };

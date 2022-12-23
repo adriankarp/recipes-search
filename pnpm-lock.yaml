@@ -112,6 +112,7 @@ importers:
       '@types/react': ^18.0.26
       '@types/react-dom': ^18.0.9
       babel-loader: ^8.2.5
+      babel-plugin-graphql-tag: ^3.3.0
       core-js: ^3.26.1
       css-loader: ^6.7.3
       graphql: ^16.6.0
@@ -144,6 +145,7 @@ importers:
       '@types/react': 18.0.26
       '@types/react-dom': 18.0.9
       babel-loader: 8.3.0_ztqwsvkb6z73luspkai6ilstpu
+      babel-plugin-graphql-tag: 3.3.0_dfknw6xjzvbhkris5p74ndxuwy
       core-js: 3.26.1
       css-loader: 6.7.3_webpack@5.75.0
       regenerator-runtime: 0.13.11
@@ -6044,6 +6046,19 @@ packages:
       - supports-color
     dev: true
 
+  /babel-literal-to-ast/2.1.0_@babel+core@7.20.5:
+    resolution: {integrity: sha512-CxfpQ0ysQ0bZOhlaPgcWjl79Em16Rhqc6++UAFn0A3duiXmuyhhj8yyl9PYbj0I0CyjrHovdDbp2QEKT7uIMxw==}
+    peerDependencies:
+      '@babel/core': ^7.1.2
+    dependencies:
+      '@babel/core': 7.20.5
+      '@babel/parser': 7.20.5
+      '@babel/traverse': 7.20.5
+      '@babel/types': 7.20.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /babel-loader/8.3.0_em3sh5kto35xuanci4cvhzqfay:
     resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==}
     engines: {node: '>= 8.9'}
@@ -6092,6 +6107,22 @@ packages:
     resolution: {integrity: sha512-yJ9BsJaISua7d8zNT7oRG1ZLBJCIdZ4PZqmH8qa9N5AK01ifk3fnkc98AXhtzE7UkfCsEumvoQWgoYLhOnJ7jQ==}
     dependencies:
       '@babel/helper-plugin-utils': 7.10.4
+    dev: true
+
+  /babel-plugin-graphql-tag/3.3.0_dfknw6xjzvbhkris5p74ndxuwy:
+    resolution: {integrity: sha512-27qfJhFJ2jQg+ktcC3cdppE2RrXZ5uiDz+39YC5lhkmftWPuJW8ET9Ehskwv7ujScZ1jSKhs5/JZKlESCkwIBg==}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+      graphql-tag: ^2.10.1
+    dependencies:
+      '@babel/core': 7.20.5
+      '@babel/helper-plugin-utils': 7.20.2
+      '@babel/parser': 7.20.5
+      babel-literal-to-ast: 2.1.0_@babel+core@7.20.5
+      debug: 4.3.4
+      graphql-tag: 2.12.6_graphql@16.6.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /babel-plugin-istanbul/6.1.1:
@@ -9240,7 +9271,6 @@ packages:
     dependencies:
       graphql: 16.6.0
       tslib: 2.4.1
-    dev: false
 
   /graphql-type-json/0.3.2_graphql@16.6.0:
     resolution: {integrity: sha512-J+vjof74oMlCWXSvt0DOf2APEdZOCdubEvGDUAlqH//VBYcOYsGgRW7Xzorr44LvkjiuvecWc8fChxuZZbChtg==}

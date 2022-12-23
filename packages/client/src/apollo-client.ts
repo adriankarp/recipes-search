@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3210/',
+  uri: 'http://localhost:3210/graphql',
   cache: new InMemoryCache()
 });
 
