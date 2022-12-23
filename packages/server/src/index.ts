@@ -14,7 +14,9 @@ const start = async () => {
     await apolloServer.start();
     await app.use(
       '/graphql',
-      cors<cors.CorsRequest>(),
+      cors({
+        origin: '*'
+      }),
       json(),
       expressMiddleware(apolloServer, {
         context: async () => {
