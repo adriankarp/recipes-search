@@ -2,12 +2,14 @@ import React from 'react';
 import NavBar from '../../components/NavBar/NavBar';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import Grid from '@mui/material/Unstable_Grid2';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
 import { useGetRecipes } from '../../hooks/useRecipes';
 
 const Home = () => {
   const [query, setQuery] = React.useState('');
 
-  const { error, loading, data } = useGetRecipes('tomato garlic bread peas');
+  const { error, loading, data } = useGetRecipes('tomato garlic');
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -29,8 +31,12 @@ const Home = () => {
         alignContent="center"
         mt={3}
       >
-        {loading ? (
-          <h5>Loading...</h5>
+        {error ? (
+          <Typography variant="h1" sx={{ marginTop: 25 }}>
+            Something went wrong...
+          </Typography>
+        ) : loading ? (
+          <CircularProgress sx={{ marginTop: 25 }} />
         ) : (
           data.recipes.map(
             (recipe: {
