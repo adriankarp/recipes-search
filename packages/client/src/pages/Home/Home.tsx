@@ -21,6 +21,24 @@ const Home = () => {
     setQuery(input);
   };
 
+  if (query === '')
+    return (
+      <>
+        <NavBar onChange={onChange} onClick={onClick} />
+        <Grid
+          container
+          spacing={1}
+          justifyContent="space-around"
+          alignContent="center"
+          mt={3}
+        >
+          <Typography variant="h4" sx={{ marginTop: 15 }}>
+            Use the search bar to find results
+          </Typography>
+        </Grid>
+      </>
+    );
+
   if (error)
     return (
       <>
@@ -32,7 +50,7 @@ const Home = () => {
           alignContent="center"
           mt={3}
         >
-          <Typography variant="h3" sx={{ marginTop: 15 }}>
+          <Typography variant="h4" sx={{ marginTop: 15 }}>
             Something went wrong...
           </Typography>
         </Grid>
