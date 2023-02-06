@@ -14,6 +14,7 @@ const Home = () => {
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     setInput(event.target.value);
+    console.log(data.recipes);
   };
 
   const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -68,7 +69,7 @@ const Home = () => {
           alignContent="center"
           mt={3}
         >
-          <CircularProgress sx={{ marginTop: 25 }} />
+          <CircularProgress sx={{ marginTop: 15 }} />
         </Grid>
       </>
     );
@@ -83,27 +84,31 @@ const Home = () => {
         alignContent="center"
         mt={3}
       >
-        {data
-          ? data.recipes.map(
-              (
-                recipe: {
-                  label: string;
-                  image: string;
-                  ingredientLines: string[];
-                },
-                index: number
-              ) => {
-                return (
-                  <RecipeCard
-                    key={index}
-                    label={recipe.label}
-                    image={recipe.image}
-                    ingredients={recipe.ingredientLines}
-                  />
-                );
-              }
-            )
-          : null}
+        {data.recipes.length !== 0 ? (
+          data.recipes.map(
+            (
+              recipe: {
+                label: string;
+                image: string;
+                ingredientLines: string[];
+              },
+              index: number
+            ) => {
+              return (
+                <RecipeCard
+                  key={index}
+                  label={recipe.label}
+                  image={recipe.image}
+                  ingredients={recipe.ingredientLines}
+                />
+              );
+            }
+          )
+        ) : (
+          <Typography variant="h4" sx={{ marginTop: 15 }}>
+            No recipes found
+          </Typography>
+        )}
       </Grid>
     </>
   );
