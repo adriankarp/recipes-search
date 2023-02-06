@@ -22,6 +22,7 @@ const GET_RECIPES = gql`
 
 export const useGetRecipes = (query: string) => {
   const { loading, error, data } = useQuery(GET_RECIPES, {
+    skip: !query,
     variables: { query }
   });
 
