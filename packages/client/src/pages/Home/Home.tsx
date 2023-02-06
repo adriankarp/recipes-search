@@ -91,6 +91,11 @@ const Home = () => {
                 label: string;
                 image: string;
                 ingredientLines: string[];
+                cuisineType: string;
+                mealType: string;
+                source: string;
+                instructionsURL: string;
+                nutritionalValuesURL: string;
               },
               index: number
             ) => {
@@ -100,6 +105,11 @@ const Home = () => {
                   label={recipe.label}
                   image={recipe.image}
                   ingredients={recipe.ingredientLines}
+                  cuisineType={recipe.cuisineType[0]}
+                  mealType={recipe.mealType[0]}
+                  source={recipe.source}
+                  instructionsURL={recipe.instructionsURL}
+                  nutritionalValuesURL={recipe.nutritionalValuesURL}
                 />
               );
             }
