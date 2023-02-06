@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack serve --mode=development",
-    "start:prod": "npm run build:prod && node dist/bundle.js",
+    "start:dev": "npm run build:dev && webpack serve --mode=development",
+    "start:prod": "npm run build:prod && webpack serve --mode=production",
     "build:dev": "rm -rf ./dist && webpack --mode=development",
     "build:prod": "rm -rf ./dist && webpack --mode=production",
     "tscheck": "tsc"

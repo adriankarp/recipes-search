@@ -8,10 +8,13 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
    optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCssAssetsPlugin({})],
+     minimizer: [new TerserJSPlugin({}), new OptimizeCssAssetsPlugin({})],
+     splitChunks: {
+       chunks: 'all',
+     },
   },
   devServer: {
     static: {
