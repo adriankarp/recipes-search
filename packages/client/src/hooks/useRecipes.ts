@@ -5,17 +5,12 @@ const GET_RECIPES = gql`
     recipes(query: $query) {
       label
       image
+      cuisineType
+      mealType
       source
       instructionsURL
       nutritionalValuesURL
-      dietLabels
-      healthLabels
-      cautions
       ingredientLines
-      calories
-      cuisineType
-      mealType
-      dishType
     }
   }
 `;

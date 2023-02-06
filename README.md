@@ -37,19 +37,20 @@ Scripts are executed from root level
 | name                                | description                          |
 | ----------------------------------- | ------------------------------------ |
 | npx nx **command** **package-name** | run **command** for **package-name** |
-| pnpm build                          | build all packages                   |
-| pnpm build:affected                 | build only affected packages         |
-| pnpm graph                          | graph for all packages               |
-| pnpm graph:affected                 | graph only for affected packages     |
-| pnpm storybook                      | run storybook                        |
-| pnpm storybook:build                | build storybook                      |
+| npx nx start:dev @recipes/client    | start dev client                     |
+| npx nx start:prod @recipes/client   | start prod client                    |
+| npx nx build:dev @recipes/client    | build dev client                     |
+| npx nx build:prod @recipes/client   | build prod client                    |
+| npx nx dev @recipes/server          | start dev server                     |
+| npx nx start @recipes/server        | start prod server                    |
 
 ## Roadmap
 
 | plan                                                        | progress |
 | ----------------------------------------------------------- | -------- |
 | Implement a wrapper on top of Edamam REST API using GraphQL | ✔️       |
-| Implement a React client for user interaction               | ⌛       |
+| Implement a React client for user interaction               | ✔️       |
+| Deploy app on AWS                                           | ⌛       |
 | Implement filter by constraints                             | ⌛       |
 | Add or remove recipes to favorite                           | ⌛       |
 
