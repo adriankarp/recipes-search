@@ -1,3 +1,5 @@
+import { config } from './constants/config';
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -5,7 +7,7 @@ import {
 } from '@apollo/client';
 
 const client = new ApolloClient<NormalizedCacheObject>({
-  uri: 'http://localhost:3210/graphql',
+  uri: config.apolloURI,
   cache: new InMemoryCache()
 });
 
